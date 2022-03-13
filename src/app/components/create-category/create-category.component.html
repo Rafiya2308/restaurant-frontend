@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="heading">
+        <h2 class="label">Create Category Item</h2>
+        </div>
+    </div>
+    <div class="row">
+        <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div class="subForm">
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <label>Category Name</label>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <input class="textBox" formControlName="categoryName" type="text" name="categoryName" id="categoryName">
+            </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <label>Category Description</label>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <input class="textBox" formControlName="categoryDescription" type="text" name="categoryDescription" id="categoryDescription">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button  type="submit" class="btn btn-secondary btn-md">Create</button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="btn btn-secondary btn-md" (click)="Cancel()">Cancel</button>
+                </div>
+            </div>
+        </div>
+        </form>
+</div>
