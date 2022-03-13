@@ -18,6 +18,7 @@
 }
 .heading{
    display: inline-block;
+   font-family: 'Courier New', Courier, monospace;
 }
 .subHeading{
     display: inline-block;
