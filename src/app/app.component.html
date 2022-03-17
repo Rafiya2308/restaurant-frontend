@@ -1,5 +1,13 @@
-<app-side-nav-bar></app-side-nav-bar>
+<app-header></app-header>
+<!-- <app-side-nav-bar></app-side-nav-bar>
 <!-- Page content -->
-  <div class="content">
+ <!-- <div class="content">
     <router-outlet></router-outlet>
-  </div>
+  </div> -->
+  <div class="container-fluid">
+    <div class="row">
+        <!-- from 12- we are dividing screen it is bootstrap grid -->
+        <div class="col-2"><app-side-nav-bar></app-side-nav-bar></div>
+        <div class="col-10"><router-outlet></router-outlet></div>
+    </div>
+</div>

@@ -11,13 +11,16 @@ import { CreateCategoryComponent } from './components/create-category/create-cat
 import { ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideNavBarComponent,
     CategoryListComponent,
-    CreateCategoryComponent
+    CreateCategoryComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxPaginationModule,
     ReactiveFormsModule
   ],
   providers: [DatePipe],

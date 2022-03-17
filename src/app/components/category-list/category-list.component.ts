@@ -7,13 +7,21 @@ import { CategoryServiceService } from '../services/category-service.service';
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.css']
 })
+
 export class CategoryListComponent implements OnInit {
  categories=new Array<Category>();
-  constructor(private categoryService:CategoryServiceService) { }
+ page=1;
+ pageSize=7;
+  totalRecords: Number=0;
+
+ constructor(private categoryService:CategoryServiceService) {
+
+ }
 
   ngOnInit(): void {
     this.categoryService.getAllCategories().subscribe((data)=>{
       this.categories=data;
+      this.totalRecords=this.categories.length;
       console.log('data',this.categories);
     },(error)=>{
       alert("Fail to fetch data")
