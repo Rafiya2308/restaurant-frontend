@@ -7,6 +7,7 @@ import { Category } from '../model/category';
   providedIn: 'root'
 })
 export class CategoryServiceService {
+ 
    url = API_CONFIG.BASIC_URL;
 
   constructor(private http: HttpClient) { }
@@ -21,6 +22,24 @@ export class CategoryServiceService {
     let API_URL = this.url+'category';
     console.log('API_URL',API_URL);
     return this.http.get(API_URL);
+  }
+
+  deleteCategory(id:Number):Observable<any>{
+    let API_URL = this.url+'category';
+    console.log('API_URL',API_URL+'/'+id);
+    return this.http.delete(API_URL+'/'+id);
+  }
+
+  getCategoryById(id:Number):Observable<any>{
+    let API_URL = this.url+'category';
+    console.log('API_URL',API_URL+'/'+id);
+    return this.http.get(API_URL+'/'+id);
+  }
+
+  updateCategory(id: any, categoryObject: Category):Observable<any>{
+    let API_URL = this.url+'category';
+    console.log('API_URL',API_URL+'/'+id);
+    return this.http.put(API_URL+'/'+id,categoryObject);
   }
   
 }

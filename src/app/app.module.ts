@@ -13,6 +13,7 @@ import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { EditCategoryComponent } from './components/edit-category/edit-category.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     SideNavBarComponent,
     CategoryListComponent,
     CreateCategoryComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule,

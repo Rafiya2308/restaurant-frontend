@@ -23,9 +23,9 @@
             </thead>
             <tbody>
                 <tr *ngFor="let category of categories |slice: (page-1) * pageSize : page * pageSize">
-                    <td><i class="material-icons">delete</i>
+                    <td><i class="material-icons" (click)="delete(category.id)">delete</i>
                         &nbsp;&nbsp;
-                        <i class="material-icons">edit</i></td>
+                        <i class="material-icons"  routerLink="/edit/category/{{category.id}}">edit</i></td>
                     <td>{{category.id}}</td>
                     <td>{{category.categoryName}}</td>
                     <td>{{category.categoryDescription}}</td>

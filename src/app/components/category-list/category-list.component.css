@@ -34,3 +34,11 @@
 .pagination{
    margin-top: 0px; 
 }
+
+i:hover{
+    cursor: pointer;
+}
+
+tr:hover {
+    background-color:  #ea80fc;
+}
