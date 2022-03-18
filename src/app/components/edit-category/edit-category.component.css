@@ -1,0 +1,23 @@
+.container{
+    min-height: 80%;
+    width: 100%;
+    background-color: #fff;
+ }
+.h2{
+    text-align: center ;
+}
+ .row{
+     margin: 20px;
+ }
+ .text{
+     width: 100%;
+ }
+ label{
+     text-align: left;
+ }
+ .btn{
+    background-color:  black;
+    color: white;
+    border-radius: 40px;
+ }
+
